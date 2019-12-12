@@ -1,0 +1,69 @@
+<html>
+<head>
+    <script>
+        function insert(){
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var mobile = document.getElementById('mobile').value;
+            var msg = document.getElementById('message').value;
+            var check = document.getElementsByClassName('mode');
+            var moc = "";
+            for(var i=0; i<3; i++)
+            {
+                if(check[i].checked == true)
+                {
+                    moc+=check[i].value+" ";
+                }
+            }    
+            if(name!="" && email!="" && mobile!="" && msg!="" &&moc!="")
+            {
+                var table = document.getElementById('table');
+                
+            var tb = document.createElement('table');
+            document.getElementById('tt').style.visibility="visible";
+           document.getElementById('t_name').innerHTML=name;
+            document.getElementById('t_email').innerHTML=email;
+            document.getElementById('t_mobile').innerHTML=mobile;
+            document.getElementById('t_msg').innerHTML=msg;
+            document.getElementById('m_o_c').innerHTML=moc;
+            document.getElementById('error').style.visibility="hidden";
+            }
+            else{
+                var error = document.getElementById('error');
+                error.innerHTML = "Some fields are missing";
+                error.style.color="red";
+            }
+           
+
+           // var  moc = document.getElementByName('moc[]').value;
+            // table.innerHTML="<table border='1'>"
+            //     table.innerHTML+="<tr><td>"+name+"</td><td>"+email+"</td><td>"+mobile+"<td></td>"+msg+"<td></td>"+moc+"</td><tr>";
+            // table.innerHTML+="</table>"
+
+        }
+
+        </script>
+</head>
+<body>
+    <div>
+        <p id="error"></p>
+    <form name="form"> 
+        <table>
+            <tr><td>Namee:</td><td><input type="text" id="name" onclick="clear()"></td></tr>  
+            <tr><td>Email:</td><td><input type="email" id="email" ></td></tr>
+            <tr><td>Mobile:</td><td><input type="text"  id="mobile"></td></tr>   
+            <tr><td>Message:</td><td><textarea name="messag" cols="25" rows="5" id="message"></textarea></td></tr>    
+            <tr><td>Mode of communication:</td><td><input type="checkbox"name="moc[]" value="Phone" class="mode">Phone</td><td><input type="checkbox" name="moc[]" value="Email" class="mode">Email</td><td><input type="checkbox" name="moc[]" value="Letter" class="mode">Letter</td></tr>       
+            <tr><td><button type="button" onclick="insert()">Click</button></td></tr>  
+        </table>
+    </form>
+</div id="table" >
+    <table border="1" id="tt" style="visibility: hidden"> 
+        <tr><td><p id="t_name"></p></td><td><p id="t_email"></p></td><td><p id="t_mobile"></p></td><td><p id="t_msg"></p></td><td><p id="m_o_c"></p></td></tr>
+    </table>
+<div>
+
+</div>
+</body>
+</html>
