@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            text-decoration: none;
+            color: black;
+        }
+        .container{
+            position:fixed;
+            width: 100%;
+        }
+        .container ul{
+            margin: -10px;
+            /*background-color: rgb(176, 159, 253);*/
+            list-style: none;
+            font-family: Oswald;
+            font-size: 25px;
+            padding-bottom: 30px;
+            box-shadow:  0px 5px 10px rgb(218, 216, 216);
+        }
+        .container ul li{
+            display: inline-flex;
+            position: relative;
+            top: 12;
+            padding: 20px;
+        }
+        .search-bar{
+            position: relative;
+            left: 1000;
+            width: 100px;
+        }
+        .bar{
+            padding:8px;
+            padding-left:40px;
+            border: 2px solid rgb(196, 193, 193);
+            border-radius: 8px;
+            text-align: left;
+        }
+        .search-btn{
+            border: none;
+            background-color: #008CBA;
+            padding: 8px;
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .det{
+            position: relative;
+            left: 30;
+        }
+        .logo{
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <ul>
+                <li class="logo">Dot2Infi</li>
+                <li>|</li>
+                <li class="det">Home</li>
+                <li class="det">Contact</li class="det">
+                <li class="det">About</li>
+                <li class="det">Academic</li>
+                <li class="search-bar"><input type="text" class="bar" placeholder="Search...">&nbsp;&nbsp;<button class="search-btn">Search</button></li>              
+            </ul>
+        </div>   
+
+        
+    </body>
+</html>
